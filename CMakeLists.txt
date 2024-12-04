@@ -12,7 +12,15 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/SFML/SFML.git
     GIT_TAG 2.5.1
 )
-FetchContent_MakeAvailable(sfml)
+
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG v3.11.2
+)
+
+
+FetchContent_MakeAvailable(sfml nlohmann_json)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -56,8 +64,6 @@ set(HEADERS_FILES
     gui/menuform.h
     dialogs/saveleader.h
     utils/scoreboardutils.h
-    utils/nlohmann/json.hpp
-    utils/nlohmann/json_fwd.hpp
     utils/settings.h
     gui/tetriswidget.h
 )
@@ -91,6 +97,7 @@ target_link_libraries(
     sfml-window
     sfml-system
     sfml-audio
+    nlohmann_json::nlohmann_json
 )
 
 include_directories(${SFML_INCLUDE_DIRS})

@@ -1,8 +1,8 @@
 #include <algorithm>
 #include <fstream>
 
-#include "nlohmann/json.hpp"
-#include "nlohmann/json_fwd.hpp"
+#include <nlohmann/json.hpp>
+#include <nlohmann/json_fwd.hpp>
 
 #include "scoreboardutils.h"
 
@@ -22,7 +22,7 @@ void ScoreBoardUtils::addScore(std::pair<std::string, int> &score)
             [](const auto& p1, const auto& p2) {
                 return std::tie(p2.second) < std::tie(p1.second);
             }
-        );
+     );
 }
 
 //-----------------------------------------------------------------------------
