@@ -1,0 +1,62 @@
+# Бинарные файлы
+*.exe
+*.o
+*.obj
+*.dll
+*.dylib
+*.so
+
+# Директорий сборки Qt
+build-*/
+build/
+*_autogen*
+
+# Файлы сборки
+*.moc
+*.cpp.o
+*.qmlc
+
+# Системные файлы
+*.DS_Store
+*.vscode/
+*.idea/
+*.user
+*.userprefs
+
+# Файлы проекта Qt
+*.pro.user
+*.pro.user.*
+
+# Кэш файлов
+*.qrc.cpp
+*.qrc.o
+
+# Логи
+*.log
+
+# Временные файлы и каталоги
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
+
+# Компоненты Qt
+*.qmlproject
+*.qmake.*
+
+# Игнорируемые файла
+CMakeCache.txt
+CMakeFiles/
+
+# Файлы документации
+*.docx
+*.pdf
+
+# Flutter
+*.flutter-plugins
+*.flutter-plugins-dependencies
+
+# Прочие
+*.install
+*.coverage
