@@ -77,10 +77,10 @@ void MenuForm::showNextPiece()
         for (int j = 0; j < 4; ++j) {
             if(print.arr()[i][j] == 1) {
                 if(type == 0) {
-                    painter.drawText(QRectF{static_cast<qreal>(i * 15), static_cast<qreal>(j * 15), 15, 15}, "[ ]");
+                    painter.drawText(QRectF{static_cast<qreal>(j * 15), static_cast<qreal>(i * 15), 15, 15}, "[ ]");
                 } else {
-                    painter.fillRect(QRectF{static_cast<qreal>(i * 15), static_cast<qreal>(j * 15), 15, 15}, color);
-                    painter.drawRect(i * 15, j * 15, 15, 15);
+                    painter.fillRect(QRectF{static_cast<qreal>(j * 15), static_cast<qreal>(i * 15), 15, 15}, color);
+                    painter.drawRect(j * 15, i * 15, 15, 15);
                 }
             }
         }

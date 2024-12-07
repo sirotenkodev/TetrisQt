@@ -82,7 +82,7 @@ void Settings::loadSettings()
     }
 
     if(!settings.contains("/visualType")) {
-        visualType = 50;
+        visualType = 0;
     } else {
         visualType = settings.value("/visualType").toInt();
     }
